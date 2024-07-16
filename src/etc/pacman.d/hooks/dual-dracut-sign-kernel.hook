@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = linux*
+
+[Action]
+Description = Sign all kernels after upgrade
+When = PostTransaction
+Exec = /usr/bin/dual-dracut-sign-kernel.sh
+
